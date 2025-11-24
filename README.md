@@ -68,26 +68,41 @@ This approach reduces false positives, increases fraud detection accuracy, and p
 Incoming Transaction
        │
        ▼
+
 ┌──────────────────────────┐
+
 │ Transaction Monitor       │ — Behavior & Memory
+
 └──────────────────────────┘
+
        │
        ├─────────► Isolation Forest (Anomaly Agent)
        ├─────────► XGBoost (Supervised ML Agent)
        │
        ▼
+
 ┌──────────────────────────┐
+
 │ LLM Reasoning Agent      │ — Multi-Signal Fusion + Explanation
+
 └──────────────────────────┘
+
        │
        ▼
+
 ┌──────────────────────────┐
+
 │ Rules & Compliance Agent │ — AML/KYC Enforcement
+
 └──────────────────────────┘
+
        │
        ▼
+
 ┌──────────────────────────┐
+
 │ Audit Logging Agent      │
+
 └──────────────────────────┘
 🧠 Multi-Agent System
 1️⃣ Transaction Monitoring Agent
@@ -251,26 +266,48 @@ POST /score_transaction
 }
 📂 Repository Structure
 ai-fraud-agent/
+
 │
+
 ├── src/
+
 │   ├── api/main.py                # FastAPI service
+
 │   ├── features.py                # Feature engineering
+
+
 │   ├── models/
+
 │   │   ├── supervised.py          # XGBoost model
+
 │   │   ├── unsupervised.py        # Isolation Forest
+
 │   ├── llm_agent.py               # LLM reasoning
+
 │   ├── reporting.py               # Audit logging
+
 │
+
 ├── models/
+
 │   ├── xgboost_model.json
+
 │   ├── isolation_forest.pkl
+
 │
+
 ├── data/
+
 │   ├── training_data.csv
+
 │
+
 ├── requirements.txt
+
 ├── README.md
+
 └── LICENSE
+
 📈 Business Impact
 ✔ Reduces Fraud Losses
 Early detection of both known & unknown patterns.
