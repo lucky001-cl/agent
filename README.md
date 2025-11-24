@@ -1,4 +1,7 @@
 AI Fraud Detection Agent — Enterprise Track
+
+( https://www.kaggle.com/competitions/agents-intensive-capstone-project/writeups/new-writeup-1763299883659 )
+
 Real-time Multi-Agent Fraud Detection with ML, Anomaly Detection & LLM Reasoning
 📌 Overview
 The AI Fraud Detection Agent is a multi-agent, enterprise-grade fraud detection system designed to evaluate financial transactions in real time.
