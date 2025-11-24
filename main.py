@@ -4,6 +4,7 @@ Main example demonstrating the AI Fraud Detection Agent system.
 
 import os
 import sys
+import time
 from datetime import datetime
 from dotenv import load_dotenv
 
@@ -148,7 +149,6 @@ def demo_stream_processing():
     stream.ingest_batch(test_transactions)
     
     # Wait for processing
-    import time
     while stream.get_queue_size() > 0:
         time.sleep(0.1)
     
